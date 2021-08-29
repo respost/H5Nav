@@ -1,0 +1,96 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+a,a:hover,a:visited,a:link{text-decoration: none;cursor: pointer;}
+ul li{list-style-type: none;}
+html{font-size: 10px;}
+/*标题栏*/
+.title-box {
+	display: flex;
+	background: #F7F7F8;
+	border-bottom: 1px solid #DDDDDD;
+	font-size: 0.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	color: #333;
+	padding: 0 10px;
+	text-align: center;
+}
+
+.title-center {
+	flex: 1;
+}
+/*H5响应式边框*/
+.VirusTable {
+	table-layout: fixed;
+	width: 100%;
+	margin-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	border-spacing: 2px 6px;
+	font-size: 0.3rem;
+	color: #4d5054;
+	border-collapse: collapse;
+}
+
+
+.VirusTable tr {
+	height: 1rem;
+	line-height: 1rem;
+	cursor:pointer;
+}
+
+.VirusTable th{
+	text-align: center;
+}
+
+.VirusTable thead {
+	font-size: 0.3rem;
+}
+
+.VirusTable thead tr {
+	color: #555;
+	line-height: 1 font-weight: 700;
+}
+
+.VirusTable tbody tr {
+	height: 1rem;
+	line-height: 1rem;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.VirusTable tbody tr:last-child {
+	border-bottom: none;
+}
+
+.VirusTable tbody tr td {
+	color: #4d5054;
+}
+
+.VirusTable tbody tr td:first-child {
+	color: #00BEC7;
+	font-weight: 700;
+}
+
+/* 小于640px */		
+@media all and (max-width:640px) {
+	.title-box {
+		font-size: 1.2rem;
+		height: 3rem;
+		line-height: 3rem;
+	}
+	.VirusTable {
+		margin-top: .1rem;
+		padding-bottom: .1rem;
+		font-size: 1rem;
+	}
+	.VirusTable tr {
+		height: 3rem;
+		line-height: 3rem;
+	}
+	.VirusTable thead {
+		font-size: 1rem
+	}
+	.VirusTable tbody tr {
+		height: 3rem;
+		line-height: 3rem;
+	}
+} 

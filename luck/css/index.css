@@ -1,0 +1,502 @@
+@charset "utf-8";
+body {
+	background: #fce243;
+}
+
+#wrap {
+	margin-top: -0.01333333rem;
+	background-image: url("../image/bg.png");
+}
+
+.time {
+	position: absolute;
+	left: 0.66666667rem;
+	top: 1rem;
+	width: 1.73333333rem;
+	line-height: 0.37333333rem;
+	font-size: 0.29333333rem;
+	color: #fff;
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+
+/*星星*/
+
+.stars-box {
+	position: relative;
+	width: 100%;
+	height: 4.26666667rem;
+}
+
+.stars {
+	opacity: 1;
+	position: absolute;
+	left: 0.73333333rem;
+	top: -0.09333333rem;
+	width: 0.2rem;
+	height: 0.2rem;
+	background-color: #fff;
+	border-radius: 50%;
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.stars:nth-child(2) {
+	left: 3.73333333rem;
+	top: 0.93333333rem;
+	width: 0.13333333rem;
+	height: 0.13333333rem;
+}
+
+.stars:nth-child(3) {
+	left: 6.4rem;
+	top: 0.16rem;
+	width: 0.13333333rem;
+	height: 0.13333333rem;
+}
+
+.stars:nth-child(4) {
+	left: 9.33333333rem;
+	top: 0.4rem;
+}
+
+.stars:nth-child(5) {
+	left: -0.09333333rem;
+	top: 2.66666667rem;
+}
+
+.stars:nth-child(6) {
+	left: 9.53333333rem;
+	top: 3.4rem;
+}
+
+.stars:nth-child(7) {
+	left: 0.6rem;
+	top: 4.13333333rem;
+	width: 0.08rem;
+	height: 0.08rem;
+}
+
+.stars:nth-child(odd) {
+	-o-animation: twinkle 1s linear infinite alternate;
+	-ms-animation: twinkle 1s linear infinite alternate;
+	-moz-animation: twinkle 1s linear infinite alternate;
+	-webkit-animation: twinkle 1s linear infinite alternate;
+	animation: twinkle 1s linear infinite alternate;
+}
+
+@keyframes twinkle {
+	100% {
+		opacity: 0;
+	}
+}
+
+.stars:nth-child(even) {
+	-o-animation: bigSmall 1s 1s linear infinite alternate;
+	-ms-animation: bigSmall 1s 1s linear infinite alternate;
+	-moz-animation: bigSmall 1s 1s linear infinite alternate;
+	-webkit-animation: bigSmall 1s 1s linear infinite alternate;
+	animation: bigSmall 1s 1s linear infinite alternate;
+}
+
+@keyframes bigSmall {
+	100% {
+		-o-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+}
+
+
+/*主体*/
+
+.main {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 12rem;
+}
+
+.rule,
+.my {
+	position: absolute;
+	top: 0.4rem;
+	width: 1.6rem;
+	height: 0.6rem;
+	background: no-repeat center / contain;
+}
+
+.rule {
+	left: 2.26666667rem;
+	background-image: url("../image/rule.png");
+}
+
+.my {
+	right: 2.26666667rem;
+	background-image: url("../image/my.png");
+}
+
+
+/*游戏盒子*/
+
+.box {
+	position: absolute;
+	left: 0.4rem;
+	top: 1.25333333rem;
+	width: 9.2rem;
+	height: 8.02666667rem;
+	background-image: url("../image/choujiang.png");
+}
+
+.set {
+	margin-top: 0.1rem;
+	width: 100%;
+	text-align: center;
+}
+
+.set img {
+	height: 1rem;
+}
+
+.coin {
+	position: absolute;
+	left: 0.4rem;
+	top: -0.53333333rem;
+	width: 1.50666667rem;
+	height: 1rem;
+	background-image: url("../image/coin.png");
+	-o-animation: jump .5s linear infinite alternate;
+	-ms-animation: jump .5s linear infinite alternate;
+	-moz-animation: jump .5s linear infinite alternate;
+	-webkit-animation: jump .5s linear infinite alternate;
+	animation: jump .5s linear infinite alternate;
+}
+
+@keyframes jump {
+	100% {
+		top: -0.66666667rem;
+	}
+}
+
+.box h2 {
+	margin-top: 0.42666667rem;
+	text-align: center;
+	font-size: 0.4rem;
+	color: #fff;
+}
+
+#change {
+	color: #fde817;
+}
+
+
+/*小彩灯*/
+
+.light {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 6.93333333rem;
+}
+
+.light li {
+	position: relative;
+	width: 0.58666667rem;
+	height: 100%;
+}
+
+.light li p {
+	margin-bottom: 1.33333333rem;
+	width: 0.56rem;
+	height: 0.56rem;
+	background-image: url("../image/dark.png");
+}
+
+.light li p.blin {
+	background-image: url("../image/light.png");
+}
+
+
+/*游戏区域*/
+
+.play {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	margin: -2.73333333rem 0 0 -4rem;
+	width: 8rem;
+	height: 5.86666667rem;
+}
+
+.play li {
+	position: relative;
+	float: left;
+	margin: 0.08rem 0 0 0.09333333rem;
+	width: 2.54666667rem;
+	height: 1.86666667rem;
+	background-image: url("../image/normal.png");
+}
+
+.play li:nth-child(4) {
+	left: 5.28rem;
+}
+
+.play li:nth-child(6) {
+	top: 1.94666667rem;
+}
+
+.play li:nth-child(7) {
+	left: 2.64rem;
+}
+
+.play li:nth-child(8) {
+	left: -2.64rem;
+}
+
+.play li:nth-child(9) {
+	left: -5.28rem;
+	top: -1.94666667rem;
+}
+
+.play li div {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+
+/*奖品图片大小*/
+
+.play li div img {
+	width: 2.54666667rem;
+	height: 1.86666667rem;
+}
+
+.play li div p {
+	width: 100%;
+	font-size: 0.29333333rem;
+	color: #c14600;
+	line-height: 1.8rem;
+	font-size: 0.4rem;
+	font-weight: bold;
+}
+
+.play li div small {
+	position: relative;
+	font-size: 0.3rem;
+	bottom: 0.65rem;
+}
+
+.play li.select {
+	background-image: url("../image/select.png");
+}
+
+
+/*开始按钮*/
+
+#btn {
+	background-image: url("../image/start.png");
+}
+
+
+/*奖品展示*/
+
+.awards {
+	top: 9.5rem;
+	padding: 0.3rem;
+	margin-left: -4.6rem;
+	width: 9.2rem;
+	background-color: #fd851f;
+	box-shadow: 0 0.26666667rem 0.26666667rem rgba(248, 85, 40, 0.5) inset;
+	border-radius: 0.13333333rem;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+#wrap .title {
+	width: 100%;
+	font-size: 0.9rem;
+	color: #fff;
+	text-align: center;
+	text-shadow: 2px 2px 3px #fd9f04;
+	position: absolute;
+	left: 0rem;
+	top: 2.5rem;
+}
+
+.title-box {
+	display: flex;
+	background: #F7F7F8;
+	border-bottom: 1px solid #DDDDDD;
+	font-size: 14px;
+	height: 1rem;
+	line-height: 1rem;
+	color: #333;
+}
+
+.title-left {
+	text-align: left;
+}
+
+.title-right {
+	text-align: right;
+}
+
+.title-center {
+	flex: 1;
+	text-align: center;
+}
+
+.adver {
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: 0 0 1px rgba(204, 204, 204, 0.7);
+}
+
+.adver ul li {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.adver ul li h5 {
+	width: 100%;
+	font-size: 0.3rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	color: #666;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.adver ul li img {
+	width: 100%;
+	height: 100%;
+}
+
+.adver ul li small {
+	color: #999;
+	font-size: 0.2rem;
+}
+
+.adver .gg {
+	border: 1px solid #ccc;
+	color: #999;
+	font-size: 0.1rem;
+	padding: 1px 3px;
+	margin-right: 0.2rem;
+}
+
+.adver img.close {
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	bottom: -0.1rem;
+	right: 0;
+}
+
+/* music */
+@-webkit-keyframes reverseRotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(-360deg);}
+}
+@-webkit-keyframes rotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(360deg);}
+}
+#musicControl { position:fixed;right:10px;top:20px;margin-top:0;display:inline-block;z-index:99999999}
+#musicControl a { display:inline-block;width:35px;height:35px;overflow:hidden;background:url('../image/music.png') no-repeat;background-size:100%;}
+#musicControl a audio{width:100%;height:56px;}
+#musicControl a.stop { background-position:left bottom;}
+#musicControl a.on { background-position:0px 1px;-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+#music_play_filter{width:100%;height:100%;overflow:hidden;position:fixed;top:0;left:0;z-index:99999998;}
+
+/*规则弹窗背景色*/
+
+#mask-rule .box-rule {
+	background-color: #f7b50b;
+}
+
+#mask-rule .box-rule .star {
+	background-image: url("../image/star1.png");
+}
+
+.red-body p.info {
+	width: 100%;
+	font-size: 0.8rem;
+	height: 4.8rem;
+	line-height: 4.8rem;
+	color: #F9BF03;
+	text-align: center;
+}
+
+
+/*H5响应式边框*/
+
+.VirusTable {
+	table-layout: fixed;
+	width: 100%;
+	margin-top: .1rem;
+	padding-bottom: .1rem;
+	text-align: center;
+	border-spacing: 2px 6px;
+	font-size: .338rem;
+	color: #4d5054;
+	border-collapse: collapse;
+}
+
+.VirusTable tr {
+	height: 0.375rem;
+	line-height: 0.375rem;
+}
+
+.VirusTable td,
+.VirusTable th {
+	text-align: center;
+	width: 30%;
+}
+
+.VirusTable thead {
+	font-size: .338rem
+}
+
+.VirusTable thead tr {
+	color: #555;
+	text-align: center;
+	line-height: 1 font-weight: 700;
+}
+
+.VirusTable tbody tr {
+	height: 1rem;
+	line-height: 1rem;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.VirusTable tbody tr:last-child {
+	border-bottom: none;
+}
+
+.VirusTable tbody tr td {
+	color: #4d5054;
+}
+
+.VirusTable tbody tr td:first-child {
+	color: #00BEC7;
+	font-weight: 700;
+}
